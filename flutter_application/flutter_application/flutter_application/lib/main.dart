@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'EEWS_screen_out.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'EEWS',
       theme: ThemeData(),
-      home: const MyHomePage(title: 'EEWS BMKG'),
+      home: const EEWSScreenOut(),
     );
   }
 }
