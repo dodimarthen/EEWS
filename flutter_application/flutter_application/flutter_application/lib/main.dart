@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'EEWS',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(),
       home: const EEWSScreenOut(),
     );
