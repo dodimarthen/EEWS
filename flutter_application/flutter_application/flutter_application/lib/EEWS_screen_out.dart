@@ -13,72 +13,90 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: CustomScrollView(
-        slivers: [ 
-          //Sliver APPBAR
+        slivers: [
+          // Sliver APPBAR
           SliverAppBar(
             leading: Icon(Icons.menu),
             title: Text('E E W S B M K G'),
-            expandedHeight: 400,
+            expandedHeight: 300,
+            floating: true,
             flexibleSpace: FlexibleSpaceBar(
-              background: Container(
-                color: Colors.black38,
-              )
+              background: Stack(
+                children: [
+                  Container(
+                    color: Colors.blueAccent,
+                  ),
+                  Positioned(
+                    top: 120,
+                    left: 100,
+                    child: Container(
+                      width: 188,
+                      height: 188,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
               ),
+            ),
           ),
-          //Sliver Items
+          // Sliver Items
           SliverToBoxAdapter(
             child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Container(
-                    height: 180,
-                    color: Colors.green[600],
-                  ),
-                )
-            )
-          ),
-          SliverToBoxAdapter(
-            child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Container(
-                    height: 180,
-                    color: Colors.green[600],
-                  ),
-                )
-            )
+              padding: const EdgeInsets.all(20.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  height: 200,
+                  color: Colors.green[600],
+                ),
+              ),
+            ),
           ),
           SliverToBoxAdapter(
             child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Container(
-                    height: 180,
-                    color: Colors.green[600],
-                  ),
-                )
-            )
+              padding: const EdgeInsets.all(20.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  height: 200,
+                  color: Colors.green[600],
+                ),
+              ),
+            ),
           ),
           SliverToBoxAdapter(
             child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Container(
-                    height: 180,
-                    color: Colors.green[600],
-                  ),
-                )
-            )
+              padding: const EdgeInsets.all(20.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  height: 200,
+                  color: Colors.green[600],
+                ),
+              ),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  height: 200,
+                  color: Colors.green[600],
+                ),
+              ),
+            ),
           )
         ],
       ),
     );
   }
 }
+
 //       appBar: AppBar(
 //         title: const Text('EEWS BMKG'),
 //         backgroundColor: Colors.black87,
