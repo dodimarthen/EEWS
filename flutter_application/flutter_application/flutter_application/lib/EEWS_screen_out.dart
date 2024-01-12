@@ -9,6 +9,8 @@ class EEWSScreenOut extends StatefulWidget {
 }
 
 class _EEWSScreenOutState extends State<EEWSScreenOut> {
+  int countdown = 10;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +20,7 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
           // Sliver APPBAR
           SliverAppBar(
             leading: Icon(Icons.menu),
-            title: Text('E E W S B M K G'),
+            title: Text('E E W S'),
             expandedHeight: 300,
             floating: true,
             pinned: true,
@@ -28,15 +30,41 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
                   Container(
                     color: Colors.blue[900],
                   ),
-                  Center(
-                    child: Container(
-                      width: 200,
-                      height: 200,
-                      child: TimeCircularCountdown(
-                        unit: CountdownUnit.second,
-                        countdownTotal: 8,
-                        onUpdated: (unit, remainingTime) => print('Updated'),
-                        onFinished: () => print('Finished'),
+                  Positioned(
+                    top: 60,
+                    left: 130,
+                    bottom: 1,
+                    child: Center(
+                      child: Container(
+                        width: 150,
+                        height: 110,
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: [
+                            // Add your countdown widget
+                            TimeCircularCountdown(
+                              unit: CountdownUnit.second,
+                              countdownTotal: 12,
+                              onUpdated: (unit, remainingTime) {
+                                // You can add logic here to update letters based on the remaining time
+                                int number = getNumberForTime(remainingTime);
+                                // Update your UI to display the number
+                                setState(() {
+                                  countdown = number;
+                                });
+                              },
+                              onFinished: () => print("Countdown Finished"),
+                            ),
+                            // Add a widget to display the number (adjust position as needed)
+                            Positioned(
+                              top: 30,
+                              child: Text(
+                                '$countdown',
+                                style: TextStyle(fontSize: 40, color: Colors.white),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -44,6 +72,7 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
               ),
             ),
           ),
+
           // Sliver Items
           SliverToBoxAdapter(
             child: Padding(
@@ -96,5 +125,11 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
         ],
       ),
     );
+  }
+
+  int getNumberForTime(int remainingTime) {
+    // Your logic to determine the number based on remaining time
+    // In this example, counting down from 10
+    return remainingTime;
   }
 }
