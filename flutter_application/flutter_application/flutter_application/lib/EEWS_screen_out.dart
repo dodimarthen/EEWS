@@ -19,7 +19,7 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
         slivers: [
           // Sliver APPBAR
           SliverAppBar(
-            leading: Icon(Icons.menu),
+            leading: Image.asset('assets\img\BMKG_1.PNG'),
             title: Text('E E W S'),
             expandedHeight: 300,
             floating: true,
@@ -36,7 +36,7 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
                     bottom: 1,
                     child: Center(
                       child: Container(
-                        width: 150,
+                        width: 130,
                         height: 110,
                         child: Stack(
                           alignment: Alignment.center,
@@ -44,9 +44,9 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
                             // Add your countdown widget
                             TimeCircularCountdown(
                               unit: CountdownUnit.second,
-                              countdownTotal: 12,
+                              countdownTotal: 14,
                               onUpdated: (unit, remainingTime) {
-                                // You can add logic here to update letters based on the remaining time
+                                // You can add logic here to update numbers based on the remaining time
                                 int number = getNumberForTime(remainingTime);
                                 // Update your UI to display the number
                                 setState(() {
@@ -57,7 +57,7 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
                             ),
                             // Add a widget to display the number (adjust position as needed)
                             Positioned(
-                              top: 30,
+                              top: 32,
                               child: Text(
                                 '$countdown',
                                 style: TextStyle(fontSize: 40, color: Colors.white),
@@ -129,7 +129,7 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
 
   int getNumberForTime(int remainingTime) {
     // Your logic to determine the number based on remaining time
-    // In this example, counting down from 10
-    return remainingTime;
+    // In this example, counting down from 10 to 0
+    return remainingTime - 1;
   }
 }
