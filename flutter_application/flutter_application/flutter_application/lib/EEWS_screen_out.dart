@@ -19,7 +19,7 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
         slivers: [
           // Sliver APPBAR
           SliverAppBar(
-            leading: Image.asset('assets\img\BMKG_1.PNG'),
+            leading: Image.asset('assets/img/BMKG_1.png'),
             title: Text('E E W S'),
             expandedHeight: 300,
             floating: true,
@@ -44,7 +44,7 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
                             // Add your countdown widget
                             TimeCircularCountdown(
                               unit: CountdownUnit.second,
-                              countdownTotal: 14,
+                              countdownTotal: 12,
                               onUpdated: (unit, remainingTime) {
                                 // You can add logic here to update numbers based on the remaining time
                                 int number = getNumberForTime(remainingTime);
