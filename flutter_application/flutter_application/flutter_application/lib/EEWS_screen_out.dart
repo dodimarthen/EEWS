@@ -94,7 +94,7 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
                     top: 50, // adjust the top position as needed
                     left: 20, // adjust the left position as needed
                     child: Image.asset(
-                      'assets/img/clock.png', // replace 'your_image.png' with the path to your image asset
+                      'assets/img/watch.png', // replace 'your_image.png' with the path to your image asset
                       width: 100, // set the width of the image
                       height: 100, // set the height of the image
           ),
