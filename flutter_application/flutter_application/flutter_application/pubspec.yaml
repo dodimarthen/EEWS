@@ -64,6 +64,8 @@ flutter:
   # assets:
   assets:
       - assets/img/BMKG_1.png
+      - assets/img/BMG.png
+      - assets/img/clock.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

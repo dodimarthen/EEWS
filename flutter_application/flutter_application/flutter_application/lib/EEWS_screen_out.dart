@@ -19,9 +19,13 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
         slivers: [
           // Sliver APPBAR
           SliverAppBar(
-            leading: Image.asset('assets/img/BMKG_1.png'),
+            leading: Padding(
+              padding: EdgeInsets.only(left: 10.0, top: 10.0), // Fix the syntax error here
+              child: Image.asset('assets/img/BMG.png'),
+            ),
+            leadingWidth: 52,
             title: Text('E E W S'),
-            expandedHeight: 300,
+            expandedHeight: 320,
             floating: true,
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
@@ -44,7 +48,7 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
                             // Add your countdown widget
                             TimeCircularCountdown(
                               unit: CountdownUnit.second,
-                              countdownTotal: 12,
+                              countdownTotal: 10,
                               onUpdated: (unit, remainingTime) {
                                 // You can add logic here to update numbers based on the remaining time
                                 int number = getNumberForTime(remainingTime);
@@ -77,15 +81,29 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.all(5.0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Container(
-                  height: 200,
-                  color: Colors.green[600],
-                ),
-              ),
-            ),
+              child: Stack(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      height: 200,
+                      color: Colors.green[600],
+                    ),
+                  ),
+                  Positioned(
+                    top: 50, // adjust the top position as needed
+                    left: 20, // adjust the left position as needed
+                    child: Image.asset(
+                      'assets/img/clock.png', // replace 'your_image.png' with the path to your image asset
+                      width: 100, // set the width of the image
+                      height: 100, // set the height of the image
           ),
+        ),
+      ],
+    ),
+  ),
+),
+
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.all(5.0),
