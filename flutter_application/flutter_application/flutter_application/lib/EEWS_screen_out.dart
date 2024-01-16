@@ -23,8 +23,8 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
               padding: EdgeInsets.only(left: 10.0, top: 10.0), // Fix the syntax error here
               child: Image.asset('assets/img/BMG.png'),
             ),
-            leadingWidth: 52,
-            title: Text('E E W S'),
+            leadingWidth: 60,
+            title: Text('EEWS'),
             expandedHeight: 320,
             floating: true,
             pinned: true,
@@ -48,7 +48,7 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
                             // Add your countdown widget
                             TimeCircularCountdown(
                               unit: CountdownUnit.second,
-                              countdownTotal: 10,
+                              countdownTotal: 12,
                               onUpdated: (unit, remainingTime) {
                                 // You can add logic here to update numbers based on the remaining time
                                 int number = getNumberForTime(remainingTime);
@@ -94,7 +94,7 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
                     top: 50, // adjust the top position as needed
                     left: 20, // adjust the left position as needed
                     child: Image.asset(
-                      'assets/img/watch.png', // replace 'your_image.png' with the path to your image asset
+                      'assets/img/clock_new.png', // replace 'your_image.png' with the path to your image asset
                       width: 100, // set the width of the image
                       height: 100, // set the height of the image
           ),
@@ -107,15 +107,28 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.all(5.0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Container(
-                  height: 200,
-                  color: Colors.green[600],
+              child: Stack(
+                children :[
+                  ClipRRect( 
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      height: 200,
+                      color: Colors.green[600],
                 ),
               ),
-            ),
-          ),
+              Positioned(
+                top: 50 ,
+                left: 20, 
+                child: Image.asset(
+                  'assets/img/tsunami.png', 
+                  width: 100,
+                  height: 100,
+            )
+          )
+        ],
+      ),
+    ),
+  ),
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.all(5.0),

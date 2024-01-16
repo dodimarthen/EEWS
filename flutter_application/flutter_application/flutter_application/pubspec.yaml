@@ -67,6 +67,10 @@ flutter:
       - assets/img/BMG.png
       - assets/img/clock.png
       - assets/img/watch.png
+      - assets/img/earthquake.png
+      - assets/img/clock_new.png
+      - assets/img/intensity.png
+      - assets/img/tsunami.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
