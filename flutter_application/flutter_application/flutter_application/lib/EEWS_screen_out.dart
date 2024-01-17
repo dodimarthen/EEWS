@@ -95,8 +95,8 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
                     left: 20, // adjust the left position as needed
                     child: Image.asset(
                       'assets/img/clock_new.png', // replace 'your_image.png' with the path to your image asset
-                      width: 100, // set the width of the image
-                      height: 100, // set the height of the image
+                      width: 90, // set the width of the image
+                      height: 90, // set the height of the image
           ),
         ),
       ],
@@ -120,9 +120,9 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
                 top: 50,
                 left: 20, 
                 child: Image.asset(
-                  'assets/img/tsunami.png', 
-                  width: 100,
-                  height: 100,
+                  'assets/img/earthquake.png', 
+                  width: 90,
+                  height: 90,
             )
           )
         ],
@@ -145,8 +145,8 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
                   top: 50,
                   left: 20,
                   child: Image.asset('assets/img/intensity.png',
-                  width: 100,
-                  height: 100,
+                  width: 90,
+                  height: 90,
               )
             )
         ],
