@@ -20,7 +20,7 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
           // Sliver APPBAR
           SliverAppBar(
             leading: Padding(
-              padding: EdgeInsets.only(left: 10.0, top: 10.0), // Fix the syntax error here
+              padding: EdgeInsets.only(left: 10.0, top: 10.0),
               child: Image.asset('assets/img/BMG.png'),
             ),
             leadingWidth: 60,
@@ -94,74 +94,90 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
                     top: 50, // adjust the top position as needed
                     left: 20, // adjust the left position as needed
                     child: Image.asset(
-                      'assets/img/clock_new.png', // replace 'your_image.png' with the path to your image asset
-                      width: 90, // set the width of the image
-                      height: 90, // set the height of the image
-          ),
-        ),
-      ],
-    ),
-  ),
-),
-
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Stack(
-                children :[
-                  ClipRRect( 
-                    borderRadius: BorderRadius.circular(20),
-                    child: Container(
-                      height: 200,
-                      color: Colors.green[600],
-                ),
+                      'assets/img/clock_new.png',
+                      width: 90,
+                      height: 90,
+                    ),
+                  ),
+                ],
               ),
-              Positioned(
-                top: 50,
-                left: 20, 
-                child: Image.asset(
-                  'assets/img/earthquake.png', 
-                  width: 90,
-                  height: 90,
-            )
-          )
-        ],
-      ),
-    ),
-  ),
+            ),
+          ),
+
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Stack(
                 children: [
                   ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Container(
-                    height: 200,
-                    color: Colors.green[600],
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      height: 200,
+                      color: Colors.green[600],
+                    ),
                   ),
-                ),
-                Positioned(
-                  top: 50,
-                  left: 20,
-                  child: Image.asset('assets/img/intensity.png',
-                  width: 90,
-                  height: 90,
-              )
-            )
-        ],
-      ),
-    ),
-  ),
+                  Positioned(
+                    top: 50,
+                    left: 20,
+                    child: Image.asset(
+                      'assets/img/earthquake.png',
+                      width: 90,
+                      height: 90,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.all(5.0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Container(
-                  height: 200,
-                  color: Colors.green[600],
-                ),
+              child: Stack(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      height: 200,
+                      color: Colors.green[600],
+                    ),
+                  ),
+                  Positioned(
+                    top: 50,
+                    left: 20,
+                    child: Image.asset(
+                      'assets/img/intensity.png',
+                      width: 90,
+                      height: 90,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Stack(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      height: 200,
+                      color: Colors.green[600],
+                    ),
+                  ),
+                  Positioned(
+                    top: 50,
+                    left: 20,
+                    child: Image.asset(
+                      'assets/img/distance.png',
+                      width: 90,
+                      height: 90,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
