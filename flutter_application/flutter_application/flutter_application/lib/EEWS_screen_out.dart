@@ -117,7 +117,7 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
                 ),
               ),
               Positioned(
-                top: 50 ,
+                top: 50,
                 left: 20, 
                 child: Image.asset(
                   'assets/img/tsunami.png', 
@@ -132,15 +132,27 @@ class _EEWSScreenOutState extends State<EEWSScreenOut> {
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.all(5.0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Container(
-                  height: 200,
-                  color: Colors.green[600],
+              child: Stack(
+                children: [
+                  ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                    height: 200,
+                    color: Colors.green[600],
+                  ),
                 ),
-              ),
-            ),
-          ),
+                Positioned(
+                  top: 50,
+                  left: 20,
+                  child: Image.asset('assets/img/intensity.png',
+                  width: 100,
+                  height: 100,
+              )
+            )
+        ],
+      ),
+    ),
+  ),
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.all(5.0),
